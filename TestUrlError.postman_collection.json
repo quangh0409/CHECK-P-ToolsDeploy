@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "6a81c0ab-bb11-472c-9808-2aa5d20f4e97",
+		"name": "TestUrl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12314965",
+		"_collection_link": "https://service-project.postman.co/workspace/service-project~82c2da7c-5047-4dd6-b3e8-596940d81ab4/collection/12314965-6a81c0ab-bb11-472c-9808-2aa5d20f4e97?action=share&source=collection_link&creator=12314965"
+	},
+	"item": [
+		{
+			"name": "url",
+			"item": [
+				{
+					"name": "get a user git by token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://35.213.147.74:8000/api/v1/users/user-git-token",
+							"protocol": "http",
+							"host": [
+								"35",
+								"213",
+								"147",
+								"74"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user-git-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get repos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"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\",\r\n    \"user\": \"quangh0409\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://35.213.147.74:8000/api/v1/users/repos-git-token",
+							"protocol": "http",
+							"host": [
+								"35",
+								"213",
+								"147",
+								"74"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"repos-git-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get branches",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"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\",\r\n    \"user\": \"quangh0409\",\r\n    \"repository\": \"Decision_help_system\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://35.213.147.74:8000/api/v1/users/branches",
+							"protocol": "http",
+							"host": [
+								"35",
+								"213",
+								"147",
+								"74"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"branches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get  languages",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"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\",\r\n    \"user\": \"quangh0409\",\r\n    \"repository\": \"Decision_help_system\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://35.213.147.74:800/api/v1/users/languages",
+							"protocol": "http",
+							"host": [
+								"35",
+								"213",
+								"147",
+								"74"
+							],
+							"port": "800",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"languages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

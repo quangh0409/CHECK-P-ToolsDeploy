@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link with Parameters</title>
+  </head>
+  <body>
+    <a id="dynamicLink" href="#">Click here to send request</a>
+
+    <script>
+      // Thông số cần truyền
+      const maxBodyLength = Infinity;
+      const url =
+        "http://35.213.159.13:8080/job/Demo/job/BE-ToolsDeploy/job/main/35/pipeline-graph/";
+      const headers = {
+        Authorization:
+          "Basic cXVhbmdoMDQwOToxMTY5MThhNzMwYWMyYTVlMTg5NjBmOTI2NGJiNTJkMjgw",
+        Cookie: "JSESSIONID.c6112ff3=node01s10pgguvy40a3etbgwlea89210.node0",
+        "Content-Type": "application/xml",
+      };
+
+      // Tạo URL mới với các thông số
+      const queryString = new URLSearchParams({
+        maxBodyLength: maxBodyLength,
+        url: url,
+        headers: JSON.stringify(headers),
+      }).toString();
+
+      // Thiết lập href của thẻ <a> để chứa URL mới
+      document
+        .getElementById("dynamicLink")
+        .setAttribute("href", "" + queryString);
+    </script>
+  </body>
+</html>
