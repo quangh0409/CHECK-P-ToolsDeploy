@@ -1,7 +1,7 @@
 const newman = require("newman"); // Import thư viện newman
 
 // Định nghĩa collection và environment
-const collection = require("./TestUrlError.postman_collection.json"); // Đường dẫn tới file collection Postman
+const collection = require("./TestUrl.postman_collection.json"); // Đường dẫn tới file collection Postman
 //const environment = require('./your-environment.json'); // Đường dẫn tới file environment Postman
 
 const { result } = require("./S_or_F");

@@ -12,3 +12,8 @@ services:
       - 3000:3000
     user: root
     image: docker.io/vutrongquang/check
+
+
+networks:
+  default:
+    name: ca-network
