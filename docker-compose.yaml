@@ -12,8 +12,8 @@ services:
       - 3000:3000
     user: root
     image: docker.io/vutrongquang/check
-
+    command: ["node", "test.js"]  # Run test.js when the container starts
 
 networks:
   default:
-    name: ca-network
+    name: network
