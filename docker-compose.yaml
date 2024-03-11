@@ -8,5 +8,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     restart: always
+    ports:
+      - 3000:3000
     user: root
     image: docker.io/vutrongquang/check

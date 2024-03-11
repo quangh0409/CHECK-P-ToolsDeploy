@@ -11,7 +11,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "newman": "^6.1.1",
-    "newman-reporter-htmlextra": "^1.23.0",
+    "newman-reporter-html": "^1.0.5",
     "reporter": "^0.1.0"
   },
   "devDependencies": {
