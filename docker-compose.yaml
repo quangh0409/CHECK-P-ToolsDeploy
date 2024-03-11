@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  check:
+    container_name: check 
+    hostname: check
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    user: root
+    image: docker.io/vutrongquang/check
